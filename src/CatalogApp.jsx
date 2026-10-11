@@ -61,6 +61,7 @@ function Catalog() {
 
   return (
     <section id="catalog" aria-label="Каталог" className="catalog">
+      {products.length > 0 && (
       <div className="catalog-bar">
         <div role="group" aria-label="Категории" className="chip pills">
           {filters.map((c) => (
@@ -79,6 +80,7 @@ function Catalog() {
           {shown.length} {pluralProducts(shown.length)}
         </span>
       </div>
+      )}
 
       {shown.length > 0 ? (
         <div className="catalog-grid">
